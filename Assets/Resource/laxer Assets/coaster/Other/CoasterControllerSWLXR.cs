@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class CoasterControllerSWLXR : MonoBehaviour {
 
 	public bool info = true;
-	[HideInInspector] [Range(1,4)] public int trains = 2;
+	[HideInInspector] [Range(1,4)] public int trains = 1;
 	[HideInInspector] [Range(0.25f,2f)] public float animationSpeed = 1.0f;
 	[Tooltip("Deactivated copy of a train. Used to instantiate all trains but the first one.")]
 	public GameObject[] trainPrefab;
