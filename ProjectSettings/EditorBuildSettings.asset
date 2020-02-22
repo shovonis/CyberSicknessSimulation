@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start_Screen.unity
+    guid: 110b3523e10ac234e835d40e47976dac
+  - enabled: 1
+    path: Assets/Scenes/Coaster_Simulation.unity
+    guid: 744e8850c7ad26b4dba63ad18da4df56
+  - enabled: 1
+    path: Assets/Scenes/Thank_You_Screen.unity
+    guid: b17ec13b3f880054dbedbbd48ac0b043
   m_configObjects: {}
