@@ -27,20 +27,16 @@ namespace NetworkAPI
                 while (Running)
                 {
                     gotMessage = client.TryReceiveFrameString(out message);
-                    if (gotMessage) break;
-                }
-
-                // If We got response that we got the data then invoke the stop Experiment
-                if (gotMessage)
-                {
-                    Debug.Log("Python Server finished collecting data: " + message);
-
-                    if (message.Contains(HAS_DATA_COLLECTED))
+                    if (gotMessage)
                     {
-                        isConnectionDone = true;
-                    }
-                    else
-                    {
+                        Debug.Log("Python Server finished collecting data: " + message);
+
+                        if (message.Contains(HAS_DATA_COLLECTED))
+                        {
+                            isConnectionDone = true;
+                            break;
+                        }
+
                         Debug.LogError("ERROR! Python Server could not collect the sensor data!");
                     }
                 }
@@ -64,7 +60,6 @@ namespace NetworkAPI
         {
             isConnectionDone = false;
             SetCmd(message);
-            // Start();
         }
 
         public bool hasDataProcessed
